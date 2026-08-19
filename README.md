@@ -20,15 +20,11 @@ An end-to-end Python pipeline for downloading, parsing, processing, and training
 
 ---
 
-## Directory Structure
+## Requirements & Dependencies
+Ensure Python 3.8+ is installed along with the required libraries:
 
-```text
-.
-├── script.py                 # Main pipeline script
-├── README.md                 # Project documentation
-└── outputs/
-    ├── recon/                # Extracted paired numpy slices (.npy)
-    │   ├── full_dose/
-    │   └── low_dose/
-    ├── model/                # Saved PyTorch checkpoints (best.pt)
-    └── tcia_pipeline_result.png # Visual evaluation output
+$Bash
+$pip install torch numpy pandas pydicom tcia_utils scikit-image matplotlib tqdm
+
+
+
