@@ -24,7 +24,9 @@ An end-to-end Python pipeline for downloading, parsing, processing, and training
 Ensure Python 3.8+ is installed along with the required libraries:
 
 $Bash
+
 $pip install torch numpy pandas pydicom tcia_utils scikit-image matplotlib tqdm
+
 
 
 
