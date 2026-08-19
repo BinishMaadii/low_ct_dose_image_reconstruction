@@ -28,5 +28,29 @@ $Bash
 $pip install torch numpy pandas pydicom tcia_utils scikit-image matplotlib tqdm
 
 
+## Configuration Parameters
 
+Key execution variables can be adjusted directly at the top of the script:
+
+| Parameter | Default | Description |
+| :--- | :--- | :--- |
+| `MANIFEST_PATH` | `.../Chest.tcia` | Path to the TCIA manifest file |
+| `PATIENT_LIMIT` | `5` | Maximum number of patient cases to process |
+| `DRY_RUN` | `False` | Set `True` to inspect total download size without fetching images |
+| `PATCH_SIZE` | `45` | Crop dimensions for local training patches |
+| `BATCH_SIZE` | `16` | DataLoader batch size |
+| `N_EPOCHS` | `5` | Total training epochs |
+
+---
+
+## Usage
+
+### 1. Perform a Dry Run (Recommended)
+Set `DRY_RUN = True` in the configuration block and execute the script to print metadata reports and verify total memory consumption against working quota limits.
+
+### 2. Execute Full Pipeline
+Set `DRY_RUN = False` and run:
+
+```bash
+python script.py
 
